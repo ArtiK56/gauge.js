@@ -441,6 +441,10 @@
       colorStart: "#6fadcf",
       colorStop: void 0,
       gradientType: 0,
+      linearGradientX0: 0,
+      linearGradientY0: 0,
+      linearGradientX1: 0,
+      linearGradientY1: 0,
       strokeColor: "#e0e0e0",
       pointer: {
         length: 0.8,
@@ -743,7 +747,7 @@
           if (this.options.gradientType === 0) {
             fillStyle = this.ctx.createRadialGradient(w, h, 9, w, h, 70);
           } else {
-            fillStyle = this.ctx.createLinearGradient(0, 0, w, 0);
+            fillStyle = this.ctx.createLinearGradient(linearGradientX0, linearGradientY0, w + linearGradientX1, linearGradientY1);
           }
           fillStyle.addColorStop(0, this.options.colorStart);
           fillStyle.addColorStop(1, this.options.colorStop);
