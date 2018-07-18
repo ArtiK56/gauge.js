@@ -747,7 +747,7 @@
           if (this.options.gradientType === 0) {
             fillStyle = this.ctx.createRadialGradient(w, h, 9, w, h, 70);
           } else {
-            fillStyle = this.ctx.createLinearGradient(linearGradientX0, linearGradientY0, w + linearGradientX1, linearGradientY1);
+            fillStyle = this.ctx.createLinearGradient(this.options.linearGradientX0, this.options.linearGradientY0, w + this.options.linearGradientX1, this.options.linearGradientY1);
           }
           fillStyle.addColorStop(0, this.options.colorStart);
           fillStyle.addColorStop(1, this.options.colorStop);
